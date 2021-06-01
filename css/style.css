@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  background-color: #000;
+  min-height: 775px;
+}
+header {
+  height: 100px;
+  background-color: #a4161a;
+  position: relative;
+}
+header h1 {
+  text-align: center;
+  line-height: 2;
+  color: #fff;
+  font-size: 48px;
+  font-weight: bold;
+}
+body {
+  background-color: #073b4c;
+}
+footer {
+  clear: both;
+  height: 100px;
+  width: 100%;
+  background-color: #335c67;
+  color: white;
+}
+footer h6 {
+  text-align: center;
+  line-height: 4;
+  color: #fff;
+  font-size: 24px;
+}
+
+.container {
+  padding: 50px;
+}
+.form-div {
+  width: calc(50% - 2px);
+  float: left;
+  display: inline-block;
+  color: #fff;
+}
+.list-div {
+  margin-left: 10%;
+  width: calc(40% - 2px);
+  float: left;
+  min-height: 500px;
+  background-color: #000;
+  border: 1px solid black;
+  display: inline-block;
+}
+
+fieldset {
+  border: 1px solid #073b4c;
+  padding: 10px;
+}
+form {
+  padding: 10px;
+  background-color: #000;
+}
+label {
+  color: #e5383b;
+  font-weight: bold;
+  font-size: 18px;
+}
+input,
+select {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #335c67;
+  margin: 10px 0;
+  color: #000;
+  border-radius: 10px;
+  font-size: 18px;
+}
+input[type="checkbox"] {
+  width: 5%;
+}
+input[type="submit"],
+input[type="reset"] {
+  background-color: #161a1d;
+  color: #660708;
+  width: 200px;
+  display: block;
+  margin: 10px auto;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  color: #fff;
+  transform: scale(0.9);
+}
+.list-div div p {
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 10px 10px 0;
+}
+.list-div div {
+  background-color: #000;
+  padding: 10px;
+  color: #e5383b;
+  border: 1px solid green;
+  margin-bottom: 5px;
+}
+.taskState {
+  width: 24px;
+  float: right;
+}
+
+.taskRemove {
+  clear: both;
+  width: 18px;
+  float: left;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.isImportant {
+  width: 50px;
+  float: left;
+}
+
+.title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  color: #d3d3d3;
+  padding-bottom: 25px;
+  clear: both;
+}
+.date {
+  text-decoration: underline;
+  color: #fff;
+  font-weight: normal;
+}
+.time {
+  color: #fff;
+  font-weight: normal;
+}
+.note {
+  color: #fff;
+  font-weight: normal;
+}
+hr {
+  clear: both;
+  border-color: #000;
+}
