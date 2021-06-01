@@ -74,14 +74,15 @@ Tasks.prototype.render = function () {
   p.appendChild(span);
   div.appendChild(p);
   listDiv.appendChild(div);
-
-  p = document.createElement("p");
-  span = document.createElement("span");
-  p.textContent = "Note : ";
-  span.textContent = this.taskNote;
-  span.className = "note";
-  p.appendChild(span);
-  div.appendChild(p);
+  if (this.taskNote != "") {
+    p = document.createElement("p");
+    span = document.createElement("span");
+    p.textContent = "Note : ";
+    span.textContent = this.taskNote;
+    span.className = "note";
+    p.appendChild(span);
+    div.appendChild(p);
+  }
   listDiv.appendChild(div);
 };
 

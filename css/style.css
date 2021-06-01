@@ -12,13 +12,7 @@ header {
   background-color: #a4161a;
   position: relative;
 }
-header h1 {
-  text-align: center;
-  line-height: 2;
-  color: #fff;
-  font-size: 48px;
-  font-weight: bold;
-}
+
 body {
   background-color: #073b4c;
 }
@@ -29,11 +23,21 @@ footer {
   background-color: #335c67;
   color: white;
 }
-footer h6 {
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.footerP {
   text-align: center;
-  line-height: 4;
+  padding-top: 20px;
   color: #fff;
-  font-size: 24px;
+  font-size: 2rem;
+  font-weight: 400;
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: fadeInUp 5s ease forwards;
 }
 
 .container {
@@ -84,18 +88,20 @@ input[type="checkbox"] {
 input[type="submit"],
 input[type="reset"] {
   background-color: #161a1d;
-  color: #660708;
+  color: #fff;
   width: 200px;
   display: block;
   margin: 10px auto;
   font-weight: bold;
   font-size: 18px;
+  transition: 1s;
 }
 
 input[type="submit"]:hover,
 input[type="reset"]:hover {
-  color: #fff;
-  transform: scale(0.9);
+  /* color: #660708; */
+  background-color: #660708;
+  transition: 1s;
 }
 .list-div div p {
   font-size: 18px;
@@ -151,4 +157,58 @@ input[type="reset"]:hover {
 hr {
   clear: both;
   border-color: #000;
+}
+.parant {
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  background-color: #a4161a;
+}
+.welcome {
+  margin-top: 15px;
+  font-size: 48px;
+  position: relative;
+  font-family: "Source Code Pro", monospace;
+  position: relative;
+  width: max-content;
+  color: #fff;
+}
+
+@keyframes writing {
+  to {
+    left: 100%;
+  }
+}
+.welcome::before {
+  content: "";
+  height: 52px;
+  background-color: #a4161a;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  animation: writing 5s steps(25) forwards;
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+.welcome::after {
+  content: "";
+  width: 0.12em;
+  height: 52px;
+
+  background-color: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  animation: writing 5s steps(25) forwards, blink 750ms steps(25) infinite;
 }
